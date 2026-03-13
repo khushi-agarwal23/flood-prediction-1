@@ -1106,7 +1106,7 @@ def page_forecast():
     cols = ["zone_id", "land_use", "rainfall_mm", "load_ratio", "flood_prob"]
     show = hr[[c for c in cols if c in hr.columns]]
 
-    if hr.empty:
+    if show.empty:
             st.success("✅ No high-risk zones for this day/scenario.")
     else:
             st.dataframe(
